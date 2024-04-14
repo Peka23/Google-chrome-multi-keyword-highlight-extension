@@ -1,0 +1,66 @@
+.container {
+    width: 300px;
+    min-height: 50px;
+    max-height: 500px; /* Allow expansion */
+    overflow: auto;
+    background-color: #f0f0f0;
+    padding: 5px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+.color-picker {
+    width: 30px;
+    height: 20px;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.text {
+    flex-grow: 1;
+    margin-right: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 70%; /* Limit the text width */
+}
+
+.slider-toggle, .color-picker {
+    flex-shrink: 0; /* Prevent these elements from shrinking */
+}
+.slider-toggle:checked {
+    background-color: #4CAF50;
+}
+
+.slider-toggle:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+.delete-btn {
+    padding: 2px 5px;
+    font-size: 10px;
+    color: rgb(5, 5, 5);
+    background: none;
+    border: 1px solid #000000;
+    cursor: pointer;
+}
+
+.slider-toggle:checked:before {
+    transform: translateX(16px);
+}
